@@ -27,7 +27,7 @@ app.post('/no-of-kidneys',userAuth,(req,res)=>{
   })
 });
 
-// middleware to handle errors or execptions caused mainly due to invalid inputs
+//(Global Catches middleware) (Error based middlewares) middleware to handle errors or execptions caused mainly due to invalid inputs
 app.use(function(err,req,res,next){
   res.send("Sorry, server cant be reached")
 })
