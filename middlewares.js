@@ -41,7 +41,7 @@ function useAuthCheck(req,res,next){
     res.status(401).json(
       {"message":'Invalid username/password'}
     );
-  
+
   } else {
   next();
   }
@@ -81,6 +81,8 @@ app.get('/time', processTime, (req,res)=>{
   console.log(timetaken)
   res.send(`Time taken for processing is ${timetaken}`)
 })
+
+
 app.listen(3000,()=>{
   console.log(`the app is running on PORT: ${PORT}`)
 })
